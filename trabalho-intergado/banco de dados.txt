@@ -1,0 +1,26 @@
+CREATE DATABASE agenda;
+USE agenda;
+
+CREATE TABLE cliente (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    telefone VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE servicos (
+    id_servico INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    data_agendamento DATE NOT NULL,
+    status VARCHAR(20) DEFAULT 'pendente'
+);
+
+CREATE TABLE usuarios (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    nome_usuario VARCHAR(50) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+
+INSERT INTO usuarios (nome_usuario, senha)
+VALUES ('usuario', 'senha');
